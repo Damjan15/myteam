@@ -15,9 +15,11 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-light-coral: #f67e7e;
     --color-rapture-green: #79c8c7;
     --color-state-green: #012f34;
     --color-dark-green: #002529;
+    --font-livvic: "Livvic", sans-serif;
   }
 }
 @layer base {
@@ -180,7 +182,7 @@
   }
 }
 body {
-  font-family: "Livvic", sans-serif;
+  font-family: var(--font-livvic);
 }
 .h1-lg {
   font-size: 40px;
@@ -310,6 +312,66 @@ body {
       background-color: var(--color-rapture-green);
     }
   }
+}
+.form-input, .form-area {
+  width: 100%;
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--color-white);
+  background-color: transparent;
+  padding-block: calc(var(--spacing) * 2);
+  font-size: 15px;
+  --tw-leading: 25px;
+  line-height: 25px;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  --tw-outline-style: none;
+  outline-style: none;
+  &::placeholder {
+    font-family: var(--font-livvic);
+  }
+  &::placeholder {
+    font-size: 15px;
+  }
+  &::placeholder {
+    --tw-leading: 25px;
+    line-height: 25px;
+  }
+  &::placeholder {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  &::placeholder {
+    color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  &:focus {
+    border-bottom-color: var(--color-rapture-green);
+  }
+  &:active {
+    border-bottom-color: var(--color-rapture-green);
+  }
+}
+.form-input.error, .form-area.error {
+  border-bottom-color: var(--color-light-coral);
+  &::placeholder {
+    color: color-mix(in srgb, #f67e7e 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-light-coral) 80%, transparent);
+    }
+  }
+}
+.error-msg {
+  margin-block: calc(var(--spacing) * 2);
+  display: none;
+  font-size: 10px;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-light-coral);
+  font-style: italic;
 }
 @property --tw-rotate-x {
   syntax: "*";

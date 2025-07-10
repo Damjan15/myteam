@@ -8,10 +8,11 @@
   --color-deep-jungle-green: #004047;
   --color-state-green: #012f34;
   --color-dark-green: #002529;
+  --font-livvic: "Livvic", sans-serif;
 }
 
 body {
-  font-family: "Livvic", sans-serif;
+  @apply font-livvic;
 }
 
 /* ====== TYPOGRAPHY ====== */
@@ -46,4 +47,19 @@ body {
 
 .btn-secondary {
   @apply bg-white text-dark-green transition-all hover:bg-rapture-green;
+}
+
+/* ====== FORM ====== */
+.form-input,
+.form-area {
+  @apply w-full bg-transparent border-b border-b-white py-2 text-[15px] leading-[25px] text-white font-semibold placeholder:text-[15px] outline-none placeholder:leading-[25px] placeholder:text-white/80 placeholder:font-livvic placeholder:font-semibold active:border-b-rapture-green focus:border-b-rapture-green;
+}
+
+.form-input.error,
+.form-area.error {
+  @apply border-b-light-coral placeholder:text-light-coral/80;
+}
+
+.error-msg {
+  @apply hidden text-light-coral my-2 text-[10px] font-bold italic;
 }
