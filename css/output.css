@@ -7,9 +7,17 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-rapture-green: #79c8c7;
+    --color-state-green: #012f34;
+    --color-dark-green: #002529;
   }
 }
 @layer base {
@@ -161,6 +169,15 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .bg-state-green {
+    background-color: var(--color-state-green);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
 }
 body {
   font-family: "Livvic", sans-serif;
@@ -228,6 +245,72 @@ body {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
+.btn {
+  display: flex;
+  height: 48px;
+  width: 153px;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(infinity * 1px);
+  font-size: 18px;
+  --tw-leading: 28px;
+  line-height: 28px;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  text-transform: lowercase;
+}
+.btn-primary {
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  border-color: var(--color-white);
+  background-color: transparent;
+  color: var(--color-white);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-dark-green);
+    }
+  }
+}
+.btn-primary.dark {
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  border-color: var(--color-state-green);
+  background-color: transparent;
+  color: var(--color-state-green);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-state-green);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-dark-green);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-rapture-green);
+    }
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -256,6 +339,11 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -266,6 +354,7 @@ body {
       --tw-skew-y: initial;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-border-style: solid;
     }
   }
 }
