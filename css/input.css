@@ -85,3 +85,15 @@ body {
 .clients-grid img {
   @apply w-[145px] h-[24px] md:w-[103px] md:h-[17px] xl:w-[200px] xl:h-[30px];
 }
+
+.director-card {
+  @apply bg-state-green w-[327px] h-[253px] flex flex-col items-center justify-center cursor-pointer;
+}
+
+.director-card img {
+  @apply rounded-full w-[96px] h-[96px] border-3 border-rapture-green mb-6;
+}
+
+.director-card p {
+  @apply text-[15px] leading-[15px] font-medium italic text-white;
+}
