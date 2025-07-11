@@ -32,6 +32,10 @@ body {
   @apply text-[18px] leading-[28px] font-bold;
 }
 
+.body {
+  @apply text-[15px] leading-[25px] font-semibold lg:text-[18px] lg:leading-[28px];
+}
+
 /* ====== BUTTONS ====== */
 .btn {
   @apply w-[153px] h-[48px] flex items-center justify-center font-semibold text-[18px] leading-[28px] lowercase rounded-full;
