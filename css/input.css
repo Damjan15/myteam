@@ -63,3 +63,13 @@ body {
 .error-msg {
   @apply hidden text-light-coral my-2 text-[10px] font-bold italic;
 }
+
+/* ====== UTILITY CLASSES ====== */
+.section-container {
+  @apply max-w-[1300px] mx-auto;
+}
+
+/* ====== HEADER ====== */
+.nav-item {
+  @apply lowercase text-white transition-colors hover:text-light-coral;
+}
