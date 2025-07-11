@@ -73,7 +73,7 @@ body {
   @apply max-w-[1300px] mx-auto;
 }
 
-/* ====== HEADER ====== */
-.nav-item {
+.nav-item,
+.footer-item {
   @apply lowercase text-white transition-colors hover:text-light-coral;
 }
