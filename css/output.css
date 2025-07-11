@@ -181,18 +181,6 @@
   .relative {
     position: relative;
   }
-  .-top-5 {
-    top: calc(var(--spacing) * -5);
-  }
-  .-top-10 {
-    top: calc(var(--spacing) * -10);
-  }
-  .-top-15 {
-    top: calc(var(--spacing) * -15);
-  }
-  .-top-20 {
-    top: calc(var(--spacing) * -20);
-  }
   .-top-25 {
     top: calc(var(--spacing) * -25);
   }
@@ -223,9 +211,6 @@
   .-left-7 {
     left: calc(var(--spacing) * -7);
   }
-  .-left-8 {
-    left: calc(var(--spacing) * -8);
-  }
   .-left-20 {
     left: calc(var(--spacing) * -20);
   }
@@ -240,6 +225,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
   }
   .my-12 {
     margin-block: calc(var(--spacing) * 12);
@@ -386,6 +374,13 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-12 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-x-6 {
@@ -543,16 +538,6 @@
       bottom: calc(var(--spacing) * 0);
     }
   }
-  .md\:-left-10 {
-    @media (width >= 48rem) {
-      left: calc(var(--spacing) * -10);
-    }
-  }
-  .md\:-left-15 {
-    @media (width >= 48rem) {
-      left: calc(var(--spacing) * -15);
-    }
-  }
   .md\:-left-30 {
     @media (width >= 48rem) {
       left: calc(var(--spacing) * -30);
@@ -606,6 +591,11 @@
   .md\:w-\[160px\] {
     @media (width >= 48rem) {
       width: 160px;
+    }
+  }
+  .md\:w-\[400px\] {
+    @media (width >= 48rem) {
+      width: 400px;
     }
   }
   .md\:w-full {
@@ -743,6 +733,11 @@
   .xl\:mx-0 {
     @media (width >= 80rem) {
       margin-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .xl\:my-12 {
+    @media (width >= 80rem) {
+      margin-block: calc(var(--spacing) * 12);
     }
   }
   .xl\:mb-0 {
@@ -1003,6 +998,15 @@ body {
     @media (hover: hover) {
       background-color: var(--color-rapture-green);
     }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
   }
 }
 .form-input, .form-area {

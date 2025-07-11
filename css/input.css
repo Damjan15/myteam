@@ -54,6 +54,9 @@ body {
 }
 
 /* ====== FORM ====== */
+.form {
+  @apply flex flex-col space-y-8;
+}
 .form-input,
 .form-area {
   @apply w-full bg-transparent border-b border-b-white py-2 text-[15px] leading-[25px] text-white font-semibold placeholder:text-[15px] outline-none placeholder:leading-[25px] placeholder:text-white/80 placeholder:font-livvic placeholder:font-semibold active:border-b-rapture-green focus:border-b-rapture-green;
