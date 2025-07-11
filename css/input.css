@@ -77,3 +77,11 @@ body {
 .footer-item {
   @apply lowercase text-white transition-colors hover:text-light-coral;
 }
+
+.clients-grid {
+  @apply grid grid-cols-1 gap-8 place-items-center md:grid-cols-5;
+}
+
+.clients-grid img {
+  @apply w-[145px] h-[24px] md:w-[103px] md:h-[17px] xl:w-[200px] xl:h-[30px];
+}

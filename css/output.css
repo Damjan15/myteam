@@ -187,18 +187,6 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
-  .-right-3 {
-    right: calc(var(--spacing) * -3);
-  }
-  .-right-10 {
-    right: calc(var(--spacing) * -10);
-  }
-  .-right-12 {
-    right: calc(var(--spacing) * -12);
-  }
-  .-right-20 {
-    right: calc(var(--spacing) * -20);
-  }
   .-right-25 {
     right: calc(var(--spacing) * -25);
   }
@@ -217,26 +205,11 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
-  .bottom-10 {
-    bottom: calc(var(--spacing) * 10);
-  }
-  .bottom-12 {
-    bottom: calc(var(--spacing) * 12);
-  }
-  .bottom-15 {
-    bottom: calc(var(--spacing) * 15);
-  }
-  .bottom-16 {
-    bottom: calc(var(--spacing) * 16);
-  }
   .-left-7 {
     left: calc(var(--spacing) * -7);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .z-10 {
-    z-index: 10;
   }
   .z-20 {
     z-index: 20;
@@ -264,6 +237,9 @@
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
   }
   .block {
     display: block;
@@ -371,13 +347,6 @@
       margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .space-y-4 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
   .space-y-6 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -459,6 +428,9 @@
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
+  .py-28 {
+    padding-block: calc(var(--spacing) * 28);
+  }
   .py-40 {
     padding-block: calc(var(--spacing) * 40);
   }
@@ -533,11 +505,6 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
-  }
-  .md\:right-0 {
-    @media (width >= 48rem) {
-      right: calc(var(--spacing) * 0);
-    }
   }
   .md\:bottom-0 {
     @media (width >= 48rem) {
@@ -727,6 +694,11 @@
       margin-bottom: calc(var(--spacing) * 20);
     }
   }
+  .xl\:mb-24 {
+    @media (width >= 80rem) {
+      margin-bottom: calc(var(--spacing) * 24);
+    }
+  }
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
@@ -735,11 +707,6 @@
   .xl\:max-w-\[445px\] {
     @media (width >= 80rem) {
       max-width: 445px;
-    }
-  }
-  .xl\:max-w-\[700px\] {
-    @media (width >= 80rem) {
-      max-width: 700px;
     }
   }
   .xl\:max-w-\[730px\] {
@@ -1051,6 +1018,31 @@ body {
     @media (hover: hover) {
       color: var(--color-light-coral);
     }
+  }
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  place-items: center;
+  gap: calc(var(--spacing) * 8);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+.clients-grid img {
+  height: 24px;
+  width: 145px;
+  @media (width >= 48rem) {
+    height: 17px;
+  }
+  @media (width >= 48rem) {
+    width: 103px;
+  }
+  @media (width >= 80rem) {
+    height: 30px;
+  }
+  @media (width >= 80rem) {
+    width: 200px;
   }
 }
 @property --tw-translate-x {
