@@ -4,11 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myteam</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/output.css">
+    <title>About | Myteam</title>
 </head>
 
 <body>
-    <h1>About Page 👥</h1>
+    <!-- Header -->
+    <header class="bg-midnight-green py-12">
+        <div class="section-container px-6 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <a href="#">
+                    <img src="assets/logo.svg" class="w-[127px] h-[32px] md:w-[160px] md:h-[40px]" alt="myteam-logo">
+                </a>
+
+                <ul class="hidden space-x-10 pl-12 md:flex">
+                    <li>
+                        <a href="#" class="h3 nav-item">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="h3 nav-item">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#" class="btn btn-primary">Contact Us</a>
+            </div>
+
+
+            <button class="block cursor-pointer md:hidden" id="hamburger-btn">
+                <img src="assets/icon-hamburger.svg" alt="hamburger-icon">
+            </button>
+
+        </div>
+
+        <nav class="fixed right-0 top-0 bottom-0 h-full z-50 w-[300px] bg-midnight-green md:hidden transform transition-transform translate-x-full duration-500 ease-in-out p-12"
+            id="mobile-menu">
+            <ul class="flex flex-col space-y-3 my-12">
+                <li>
+                    <a href="#" class="h3 nav-item">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="h3 nav-item">About</a>
+                </li>
+            </ul>
+
+            <a href="#" class="btn btn-primary">Contact Us</a>
+
+            <button class="absolute top-5 right-3 cursor-pointer" id="close-btn">
+                <img src="assets/icon-close.svg" alt="close-icon">
+            </button>
+
+            <img src="assets/bg-pattern-about-1-mobile-nav-1.svg" alt="pattern-sidebar"
+                class="absolute bottom-0 -right-25">
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="relative z-20 bg-midnight-green h-[500px] px-6 overflow-hidden">
+        <div class="section-container h-full">
+            <div
+                class="flex flex-col items-center justify-center h-full text-center space-y-6 md:max-w-[500px] md:mx-auto xl:flex-row xl:max-w-full xl:text-start xl:justify-between">
+                <h1 class="h1-sm text-white">About</h1>
+
+                <p class="body text-white xl:max-w-[730px]">We help companies build dynamic teams made up of top global
+                    talent. Using our
+                    network of passionate
+                    professionals we drive innovation and deliver incredible outcomes. Talented, diverse teams shape the
+                    best products and experiences. We'll bring those teams to you.</p>
+            </div>
+
+            <div>
+                <img src="assets/bg-pattern-about-1-mobile-nav-1.svg" alt="home-pattern-mobile"
+                    class="absolute -right-28 -bottom-20 md:bottom-0">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green py-12 px-6">
+        <div class="section-container flex flex-col items-center justify-between space-y-8 md:flex-row md:text-center ">
+            <div class="flex flex-col md:flex-row md:space-x-12">
+                <div>
+                    <img src="assets/logo.svg" class="w-[160px] h-[40px] mb-4" alt="myteam-logo">
+
+                    <ul class="flex space-x-8 justify-center items-center mb-4 md:mb-0 md:justify-start">
+                        <li>
+                            <a href="/" class="footer-item font-semibold">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="footer-item font-semibold">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="text-white/60 text-center md:text-left">
+                        <li>987 Hillcrest Lane</li>
+                        <li>Irvin, CA</li>
+                        <li>California 92714</li>
+                        <li>Call Us: 949-833-7432</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <ul class="flex space-x-6 w-full mb-4 justify-center items-center xl:justify-start xl:items-start">
+                    <li>
+                        <a href="#">
+                            <img src="assets/icon-facebook.svg" alt="facebook-icon">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="assets/icon-pinterest.svg" alt="pinterest-icon">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="assets/icon-twitter.svg" alt="twitter-icon">
+                        </a>
+                    </li>
+                </ul>
+
+                <span class="block text-white/60">Copyright 2025. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
