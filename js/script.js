@@ -21,3 +21,67 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   );
 });
+
+// ====== FORM SUBMISSION ======
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const companyName = document.getElementById("company-name");
+  const title = document.getElementById("title");
+  const message = document.getElementById("message");
+
+  // Show Error
+  function showError(input, message) {
+    input.classList.add("error");
+    const error = input.nextElementSibling;
+
+    if (error) {
+      error.textContent = message;
+      error.classList.remove("hidden");
+      error.classList.add("block");
+    }
+  }
+
+  // Show Success
+  function showSuccess(input) {
+    input.classList.remove("error");
+
+    const error = input.nextElementSibling;
+    if (error) {
+      error.textContent = "";
+      error.classList.add("hidden");
+      error.classList.remove("block");
+    }
+  }
+
+  // Check Email Validation
+  function checkEmail(input) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (input.value.trim() !== "" && !re.test(input.value.trim())) {
+      showError(input, "Please use a valid email address");
+      return false;
+    }
+
+    return true;
+  }
+
+  // Check Required Fields
+  function checkRequired(inputArr) {
+    inputArr.forEach((input) => {
+      if (input.value.trim() === "") {
+        showError(input, "This field is required");
+      } else {
+        showSuccess(input);
+      }
+    });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    checkRequired([name, email, message]);
+    checkEmail(email);
+  });
+});

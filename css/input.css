@@ -68,7 +68,7 @@ body {
 }
 
 .error-msg {
-  @apply hidden text-light-coral my-2 text-[10px] font-bold italic;
+  @apply text-light-coral my-2 text-[10px] font-bold italic;
 }
 
 /* ====== UTILITY CLASSES ====== */
