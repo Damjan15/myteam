@@ -78,10 +78,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     checkRequired([name, email, message]);
     checkEmail(email);
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        form.reset();
+        window.location.href = "index.html";
+      }
+    } catch (error) {
+      console.log(error);
+    }
   });
 });

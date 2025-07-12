@@ -96,29 +96,30 @@
                 </div>
 
                 <div class="w-full md:max-w-[500px] xl:max-w-full">
-                    <form class="form" id="form">
+                    <form class="form" id="form" action="https://formspree.io/f/xpwrvena" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Name" class="form-input" id="name">
+                            <input type="text" placeholder="Name" class="form-input" name="name" id="name">
                             <span class="error-msg hidden"></span>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Email Address" class="form-input" id="email">
+                            <input type="text" placeholder="Email Address" class="form-input" name="email" id="email">
                             <span class="error-msg hidden"></span>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name" class="form-input" id="company-name">
+                            <input type="text" placeholder="Company Name" class="form-input" name="company-name"
+                                id="company-name">
                             <span class="error-msg hidden"></span>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Title" class="form-input" id="title">
+                            <input type="text" placeholder="Title" class="form-input" name="title" id="title">
                             <span class="error-msg hidden"></span>
                         </div>
 
                         <div class="form-group">
-                            <textarea name="" class="form-area" placeholder="Message" id="message"></textarea>
+                            <textarea name="message" class="form-area" placeholder="Message" id="message"></textarea>
                             <span class="error-msg hidden"></span>
                         </div>
 
